@@ -100,27 +100,28 @@ textarea{resize:vertical;min-height:88px;line-height:1.65}
 .price-input::-webkit-inner-spin-button,.price-input::-webkit-outer-spin-button{-webkit-appearance:none}
 .price-input::placeholder{color:#c0c8d8;font-weight:400}
 /* 총계 박스 */
-.total-box{background:linear-gradient(135deg,#0b2d55,#1450a0);border-radius:14px;padding:20px 24px;margin-top:16px;color:#fff}
-.total-box-title{font-size:12px;opacity:.7;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
-.total-rows{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
-.total-row{display:flex;justify-content:space-between;align-items:center;font-size:13px}
-.total-row-key{opacity:.75}
-.total-row-val{font-weight:600}
-.total-divider{height:1px;background:rgba(255,255,255,.2);margin:8px 0}
+.total-box{background:#fff;border:2px solid #0b2d55;border-radius:14px;padding:22px 24px;margin-top:16px;color:#1a1a2e}
+.total-box-title{font-size:13px;font-weight:700;color:#0b2d55;text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px;padding-bottom:10px;border-bottom:1.5px solid #e2e8f0}
+.total-rows{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}
+.total-row{display:flex;justify-content:space-between;align-items:flex-start;font-size:14px;gap:12px}
+.total-row-key{color:#444;flex-shrink:0}
+.total-row-val{font-weight:600;color:#1a1a2e;text-align:right}
+.total-divider{height:1.5px;background:#e2e8f0;margin:12px 0}
 .total-final{display:flex;justify-content:space-between;align-items:center}
-.total-final-key{font-size:15px;font-weight:700}
-.total-final-val{font-size:22px;font-weight:800;letter-spacing:-.5px}
-.total-note{font-size:11px;opacity:.55;margin-top:8px}
-.total-group-label{font-size:11px;font-weight:700;opacity:.6;text-transform:uppercase;letter-spacing:.5px;margin:10px 0 5px;padding-top:8px;border-top:1px solid rgba(255,255,255,.1)}
+.total-final-key{font-size:15px;font-weight:700;color:#0b2d55}
+.total-final-val{font-size:24px;font-weight:800;letter-spacing:-.5px;color:#0b2d55}
+.total-note{font-size:12px;color:#888;margin-top:8px}
+@media print{.total-box{border:1.5px solid #333!important;-webkit-print-color-adjust:exact}}
+.total-group-label{font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.5px;margin:10px 0 5px;padding-top:8px;border-top:1px solid #e8eaf0}
 .total-group-label:first-child{margin-top:0;padding-top:0;border-top:none}
 .total-calc{opacity:.75;font-size:12px}
 .total-line-amt{margin-left:8px;font-weight:700;font-size:13px}
-.total-summary-row{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin-bottom:7px}
-.total-summary-key{opacity:.75}
-.total-summary-val{font-weight:600;font-size:15px}
-.total-vat{font-size:12px;opacity:.6;margin-top:4px;text-align:right}
-.total-calc-hint{font-size:12px;opacity:.55;text-align:right;margin-top:3px}
-.total-unit-price{font-size:15px;font-weight:700}
+.total-summary-row{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin-bottom:8px}
+.total-summary-key{color:#555}
+.total-summary-val{font-weight:700;font-size:15px;color:#1a1a2e}
+.total-vat{font-size:12px;color:#888;margin-top:4px;text-align:right}
+.total-calc-hint{font-size:12px;color:#888;text-align:right;margin-top:3px}
+.total-unit-price{font-size:15px;font-weight:700;color:#0b2d55}
 .total-row-val{display:flex;align-items:center;gap:0;flex-direction:column;align-items:flex-end;gap:2px}
 /* ── 계약 조건 ── */
 .months-wrap{display:none;margin-bottom:14px}.months-wrap.show{display:block}
@@ -161,12 +162,7 @@ textarea{resize:vertical;min-height:88px;line-height:1.65}
 .visit-consult-desc{font-size:13px;color:#666;line-height:1.6}
 .visit-consult-note{font-size:11px;color:#aaa;margin-top:8px;padding-top:8px;border-top:1px solid #e8eaf0}
 /* ── 파일 ── */
-.file-drop{border:2px dashed #c0c8d8;border-radius:8px;padding:22px;text-align:center;background:#fafbfc;cursor:pointer;transition:all .15s;position:relative}
-.file-drop:hover{border-color:#0d3b6e;background:#f0f5ff}
-.file-drop input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;border:none;background:none;box-shadow:none;padding:0}
-.f-icon{font-size:26px;margin-bottom:5px}.f-label{font-size:13px;color:#555}.f-label strong{color:#0d3b6e}
-.f-name{margin-top:8px;font-size:12px;color:#0d3b6e;font-weight:600;display:none}
-.file-note{font-size:11px;color:#aaa;margin-top:6px}
+
 /* ── 리뷰 ── */
 .review-section{margin-bottom:16px}
 .review-title{font-size:12px;font-weight:700;color:#0d3b6e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid #e8eaf0}
@@ -245,7 +241,7 @@ textarea{resize:vertical;min-height:88px;line-height:1.65}
   <div style="font-size:11px;color:#aaa;margin-top:6px">계약담당자 정보는 자동 입력됩니다</div>
 </div>
 
-<form id="orderForm" action="https://formspree.io/f/xzdldpkn" method="POST" enctype="multipart/form-data">
+<form id="orderForm" action="https://formspree.io/f/xzdldpkn" method="POST" >
 
 <!-- STEP 1: 계약담당자 -->
 <div class="step-panel active" id="step1">
@@ -302,9 +298,22 @@ textarea{resize:vertical;min-height:88px;line-height:1.65}
     </div>
     <div class="months-wrap" id="monthsWrap">
       <label id="monthsLabel">계약 개월수</label>
-      <input type="number" name="계약개월수" id="f_months" placeholder="예: 24" min="1">
+      <input type="number" name="계약개월수" id="f_months" placeholder="예: 24" min="1" onchange="updateTotal()">
       <div class="field-err" id="e_months">기간을 입력해 주세요</div>
       <div class="notice-box" id="monthsNotice"></div>
+    </div>
+    <!-- 구매 전용: 통신비 입력 -->
+    <div id="telecomWrap" style="display:none;margin-top:14px">
+      <label>통신비 <span class="hint">단말기 1대당 / 월</span></label>
+      <div style="display:flex;align-items:center;border:1.5px solid #e2e8f0;border-radius:10px;background:#fff;overflow:hidden;height:50px">
+        <span style="padding:0 14px;font-size:14px;font-weight:700;color:#1450a0;border-right:1px solid #e2e8f0;height:100%;display:flex;align-items:center;background:#f8f9ff;flex-shrink:0">₩</span>
+        <input type="number" id="f_telecom" name="통신비_월" value="10000" min="0" style="flex:1;border:none;outline:none;font-size:16px;font-weight:600;color:#1a1a2e;font-family:inherit;padding:0 14px;height:100%;background:#fff;-moz-appearance:textfield" onchange="updateTotal()">
+        <span style="padding:0 14px;font-size:13px;color:#888;flex-shrink:0">/ 월 · 1대당</span>
+      </div>
+      <div style="font-size:12px;color:#888;margin-top:6px;line-height:1.65">
+        · 기본 통신비 월 10,000원 (협의 시 수정 가능)<br>
+        · 임대(렌탈)의 경우 통신비 무상 지원
+      </div>
     </div>
   </div>
   <div class="card">
@@ -502,14 +511,27 @@ textarea{resize:vertical;min-height:88px;line-height:1.65}
   <div class="card">
     <div class="card-title"><div class="dot"></div>첨부 서류</div>
     <div class="field">
-      <label>사업자등록증 <span class="hint">원수급인(원청) 사업자등록증 / JPG·PNG·PDF</span></label>
-      <div class="file-drop" id="fileDrop">
-        <input type="file" name="사업자등록증" id="fileInput" accept=".jpg,.jpeg,.png,.pdf" onchange="showFile(this)">
-        <div class="f-icon">📎</div>
-        <div class="f-label">클릭하거나 파일을 드래그하세요<br><strong>사업자등록증 첨부</strong></div>
-        <div class="f-name" id="fileName"></div>
+      <label>사업자등록증 <span class="hint">원수급인(원청) 사업자등록증</span></label>
+      <div style="background:#f8f9ff;border:1.5px solid #e2e8f0;border-radius:10px;padding:16px 18px;line-height:1.85;font-size:14px;color:#444">
+        <div style="font-weight:600;color:#0b2d55;margin-bottom:10px">📎 사업자등록증 전달 방법</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="background:#0b2d55;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap">이메일</span>
+            <span style="color:#1a1a2e">dongy99@humanintech.co.kr</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="background:#fee500;color:#1a1a2e;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap">카카오톡</span>
+            <a href="https://open.kakao.com/o/sSFFAu1h" target="_blank" style="color:#0b2d55;font-weight:600;text-decoration:none">오픈채팅으로 전송하기 →</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="background:#25d366;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap">문자</span>
+            <span style="color:#1a1a2e">010-6410-0497 로 전송</span>
+          </div>
+        </div>
+        <div style="margin-top:10px;font-size:12px;color:#999;border-top:1px solid #e8eaf0;padding-top:10px">
+          ※ 이미 전달하셨거나 별도 송부 예정이면 발주 요청서 제출 후 따로 보내주시면 됩니다.
+        </div>
       </div>
-      <div class="file-note">※ 원청 사업자등록증을 첨부해 주세요. 이미 전달하셨거나 별도 송부 예정이면 생략 가능합니다.</div>
     </div>
     <div class="field">
       <label>기타 요청사항</label>
@@ -696,12 +718,48 @@ function updateTotal() {
         '<div class="total-note">※ 계약 개월수 입력 시 총 사용금액이 계산됩니다</div>';
     }
   } else {
+    var telecomPerUnit = parseInt((document.getElementById('f_telecom') || {}).value) || 10000;
+    var totalQtyAll = 0;
+    priced.forEach(function(m){ totalQtyAll += m.qty; });
+    var telecomTotal = months > 0 ? telecomPerUnit * totalQtyAll * months : 0;
+    var grandTotal = subtotal + telecomTotal;
+
     out +=
-      '<div class="total-final">' +
-        '<span class="total-final-key">총 구매금액' + (isSingle ? '' : ' 합계') + '</span>' +
-        '<span class="total-final-val">₩' + formatNum(subtotal) + '</span>' +
-      '</div>' +
-      '<div class="total-vat">VAT 별도 / 통신비 별도 청구</div>';
+      '<div class="total-summary-row">' +
+        '<span class="total-summary-key">단말기 구매금액' + (isSingle ? '' : ' 합계') + '</span>' +
+        '<span class="total-summary-val">₩' + formatNum(subtotal) + '</span>' +
+      '</div>';
+
+    if (months > 0) {
+      out +=
+        '<div class="total-summary-row">' +
+          '<span class="total-summary-key">통신비</span>' +
+          '<span class="total-summary-val">₩' + formatNum(telecomPerUnit) + ' × ' + totalQtyAll + '대 × ' + months + '개월</span>' +
+        '</div>' +
+        '<div class="total-summary-row" style="padding-left:12px">' +
+          '<span class="total-summary-key" style="color:#888;font-size:13px">통신비 소계</span>' +
+          '<span class="total-summary-val" style="font-size:14px">₩' + formatNum(telecomTotal) + '</span>' +
+        '</div>' +
+        '<div class="total-divider" style="margin:10px 0 12px"></div>' +
+        '<div class="total-final">' +
+          '<span class="total-final-key">총 합계 (구매 + 통신비)</span>' +
+          '<span class="total-final-val">₩' + formatNum(grandTotal) + '</span>' +
+        '</div>' +
+        '<div class="total-calc-hint">구매 ₩' + formatNum(subtotal) + ' + 통신비 ₩' + formatNum(telecomTotal) + '</div>';
+    } else {
+      out +=
+        '<div class="total-summary-row">' +
+          '<span class="total-summary-key">통신비</span>' +
+          '<span class="total-summary-val">₩' + formatNum(telecomPerUnit) + ' / 대 · 월</span>' +
+        '</div>' +
+        '<div class="total-divider" style="margin:10px 0 12px"></div>' +
+        '<div class="total-final">' +
+          '<span class="total-final-key">단말기 구매금액</span>' +
+          '<span class="total-final-val">₩' + formatNum(subtotal) + '</span>' +
+        '</div>' +
+        '<div class="total-note">※ 계약 개월수 입력 시 통신비 포함 총액이 계산됩니다</div>';
+    }
+    out += '<div class="total-vat">VAT 별도</div>';
   }
 
   box.innerHTML = out;
@@ -767,10 +825,12 @@ function onTypeChange(val) {
   if(val==='렌탈'){
     wrap.classList.add('show');inp.required=true;lbl.textContent='계약 개월수';
     updatePriceLabels('렌탈');
+    document.getElementById('telecomWrap').style.display='none';
     note.innerHTML='<strong>렌탈 안내</strong><br>· 개월수가 길수록 월 단가가 낮아집니다.<br>· <strong>계약 시작일은 출고일 다음 영업일</strong>부터입니다 (예: 금요일 출고 → 월요일 시작).<br>· 조기 반납 시 잔여 기간 차액정산금이 청구될 수 있습니다.<br>· 기간이 불확실하면 담당자에게 문의해 주세요.';
   } else if(val==='구매'){
     wrap.classList.add('show');inp.required=true;lbl.textContent='통신 약정 기간 (개월)';
     updatePriceLabels('구매');
+    document.getElementById('telecomWrap').style.display='block';
     note.innerHTML='<strong>구매 안내</strong><br>· 단말기를 영구 소유하며, 현장 종료 후에도 계속 사용 가능합니다.<br>· 구매 후에도 <strong>LTE 통신 서비스 약정</strong>이 필요합니다. 공사 예정 기간을 입력해 주세요.<br><br><strong>📋 발주기관 비용 정산 (감가상각 기준)</strong><table><tr><th>사용 기간</th><th>잔존가치</th><th>정산금액</th></tr><tr><td>1년 미만</td><td style="color:#0d3b6e">75%</td><td style="color:#c0392b">25%</td></tr><tr><td>1년</td><td style="color:#0d3b6e">60%</td><td style="color:#c0392b">40%</td></tr><tr><td>2년</td><td style="color:#0d3b6e">30%</td><td style="color:#c0392b">70%</td></tr><tr><td>3년</td><td style="color:#0d3b6e">10%</td><td style="color:#c0392b">90%</td></tr><tr><td>4년 이상</td><td style="color:#0d3b6e">0%</td><td style="color:#c0392b">100%</td></tr></table>※ 내용연수 4년 / 공제부금 납부확인서 기준<br><br><strong>🔄 현장 종료 후 재사용</strong><br>· 현장 종료 시 통신 해지를 담당자에게 요청해 주세요.<br>· 신규 현장 발생 시 공제가입번호를 알려주시면 <strong>원격 변경 무상</strong>으로 처리해드립니다.<br>· 설치가 필요한 경우 설치비가 별도로 발생합니다.';
   } else {
     wrap.classList.remove('show');inp.required=false;inp.value='';
@@ -908,21 +968,46 @@ function buildReview(){
   // 단독 총계 박스 업데이트 (중복 방지)
   updateTotal();
 }
-function showFile(input){
-  var el=document.getElementById('fileName');
-  if(input.files&&input.files[0]){el.textContent='✓ '+input.files[0].name;el.style.display='block';}
-}
-(function(){
-  var drop=document.getElementById('fileDrop');
-  if(!drop) return;
-  drop.addEventListener('dragover',function(e){e.preventDefault();drop.style.borderColor='#0d3b6e';});
-  drop.addEventListener('dragleave',function(){drop.style.borderColor='';});
-  drop.addEventListener('drop',function(e){e.preventDefault();drop.style.borderColor='';var fi=document.getElementById('fileInput');fi.files=e.dataTransfer.files;showFile(fi);});
-})();
+// 파일 업로드 미사용
 document.getElementById('orderForm').addEventListener('submit',function(e){
   e.preventDefault();
   var btn=document.getElementById('submitBtn');
   btn.disabled=true;btn.textContent='제출 중...';
+
+  // 이메일 제목 설정
+  var biz  = (document.getElementById('f_biz') || {}).value || '';
+  var site = (document.getElementById('f_site') || {}).value || '';
+  var subj = '[발주요청] ' + (biz || '업체미기재') + (site ? ' · ' + site : '');
+  var subjEl = document.getElementById('_subject_field');
+  if (!subjEl) {
+    subjEl = document.createElement('input');
+    subjEl.type='hidden'; subjEl.name='_subject'; subjEl.id='_subject_field';
+    this.appendChild(subjEl);
+  }
+  subjEl.value = subj;
+
+  // 예상금액 요약 hidden 필드
+  var totalBox = document.getElementById('totalBox');
+  var summaryEl = document.getElementById('_summary_field');
+  if (!summaryEl) {
+    summaryEl = document.createElement('input');
+    summaryEl.type='hidden'; summaryEl.name='예상금액_요약'; summaryEl.id='_summary_field';
+    this.appendChild(summaryEl);
+  }
+  summaryEl.value = totalBox ? totalBox.innerText.replace(/
++/g,'
+').trim() : '단가 미입력';
+
+  // 회신 이메일
+  var emailEl = document.getElementById('f_email');
+  var replyEl = document.getElementById('_replyto_field');
+  if (!replyEl) {
+    replyEl = document.createElement('input');
+    replyEl.type='hidden'; replyEl.name='_replyto'; replyEl.id='_replyto_field';
+    this.appendChild(replyEl);
+  }
+  if (emailEl) replyEl.value = emailEl.value;
+
   fetch(this.action,{method:'POST',body:new FormData(this),headers:{'Accept':'application/json'}})
   .then(function(r){
     if(r.ok){
